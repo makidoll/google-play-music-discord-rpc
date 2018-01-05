@@ -11,6 +11,8 @@
 - Open `INSTALL.bat`
 - Open `RUN.bat`
 
+- You can use `pm2` to make it run in the background or make a shortcut to the `RUN.bat` file.
+
 ## Config
 Config has already been set with my settings. If you want to change the ID's though, they are located in `config.js`
 
