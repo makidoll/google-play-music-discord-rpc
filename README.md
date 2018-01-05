@@ -5,7 +5,7 @@
 
 ## Installation
 - Download **Violentmonkey** from https://violentmonkey.github.io/get-it
-- Install my **userscript** from https://raw.githubusercontent.com/makixx/google-play-music-discord-rpc/master/google-play-music-rpc.user.js
+- Install **my userscript** from https://raw.githubusercontent.com/makixx/google-play-music-discord-rpc/master/google-play-music-rpc.user.js
 - Download **Node.js LTS** from https://nodejs.org/en
 - Download and **unzip my script** from https://github.com/makixx/google-play-music-discord-rpc/archive/master.zip
 - Open `INSTALL.bat`
