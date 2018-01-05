@@ -1,17 +1,13 @@
 # Google Play Music Discord RPC
 > 🎧 Show your Discord friends which song you're listening to!
 
-![Preview](https://raw.githubusercontent.com/makixx/google-play-music-rpc/master/images/screenshot.jpg)
+![Preview](https://raw.githubusercontent.com/makixx/google-play-music-rpc/master/images/preview.png)
 
 ## Installation
-- Download **Violentmonkey** from
-https://violentmonkey.github.io/get-it
-- Install **userscript** from
-https://raw.githubusercontent.com/makixx/google-play-music-discord-rpc/master/google-play-music-rpc.user.js
-- Download **Node.js LTS** from
-https://nodejs.org/en
-- Download and unzip my script from
-https://github.com/makixx/google-play-music-discord-rpc/archive/master.zip
+- Download **Violentmonkey** from https://violentmonkey.github.io/get-it
+- Install **userscript** from https://raw.githubusercontent.com/makixx/google-play-music-discord-rpc/master/google-play-music-rpc.user.js
+- Download **Node.js LTS** from https://nodejs.org/en
+- Download and **unzip my script** from https://github.com/makixx/google-play-music-discord-rpc/archive/master.zip
 - Open `INSTALL.bat`
 - Open `RUN.bat`
 
