@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name Google Play Music RPC
+// @name Google Play Music Discord RPC
 // @namespace https://maki.cat
 // @grant none
 // @author Maki
