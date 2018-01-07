@@ -33,4 +33,4 @@ setInterval(function() {
 		xhr.send(myStupidEncodingThing(update));
 	}
 
-}, 4000);
+}, 8000);
