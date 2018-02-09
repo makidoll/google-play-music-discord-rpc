@@ -17,4 +17,4 @@ You can then use `pm2` to make it run in the background or make a shortcut to th
 Config has already been set with my settings. If you want to change the ID's though, they are located in `config.js`
 
 ## Issues
-- The userscript automatically POSTs (using XMLHttpRequest) when there is a song change, but doing this too often causes the browser to not send the request.
+- ~~The userscript automatically POSTs (using XMLHttpRequest) when there is a song change, but doing this too often causes the browser to not send the request.~~ Fixed by using web sockets. HOW CAN I NOT HAVE THOUGHT OF THAT EARLIER!! GAHH!
