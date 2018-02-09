@@ -17,3 +17,4 @@ You can then use `pm2` to make it run in the background or make a shortcut to th
 ## Issues
 - ~~The userscript automatically POSTs (using XMLHttpRequest) when there is a song change, but doing this too often causes the browser to not send the request.~~ Fixed by using web sockets. HOW CAN I NOT HAVE THOUGHT OF THAT EARLIER!! GAHH!
 - When the page isn't open, the current time and duration wont get updated.
+- When a song is changed, the play/pause element goes into pause mode which can have issues considering Discord doesn't instantly update.
