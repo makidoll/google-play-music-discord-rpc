@@ -29,28 +29,36 @@ io.on("connection", function(socket){
 	console.log(socket.handshake.address.split(":")[3]+" connected!");
 
 	socket.on("song_change", function(now) {
-		//let current = now.current;
-		//delete now.current;
+		let current = now.current;
+		delete now.current;
 
 		let json = JSON.stringify(now);
 		if (current_song != json) {
 			current_song = json;
-			//now.current = current;
+			now.current = current;
 			try {
-				console.log(now.artist+" - "+now.title+" ("+now.album+") ("+now.duration+")");
+				let left = [
+					parseInt(now.duration.split(":")[0])-parseInt(now.current.split(":")[0]),
+					parseInt(now.duration.split(":")[1])-parseInt(now.current.split(":")[1])
+				];
 
-				let end = moment()
-					.add(now.duration.split(":")[0], "m")
-					.add(now.duration.split(":")[1], "s")
-					.unix();
+				let start = (now.state == "playing")? moment().unix(): null;
+				let end = (now.state == "playing")? moment()
+					.add(left[0], "m")
+					.add(left[1], "s")
+					.unix(): null;
+				let paused = (now.state == "paused")?
+					keys.imageKeys.small: undefined;
+
+				console.log(now.artist+" - "+now.title+" ("+now.album+") ("+left[0]+":"+left[1]+" left, "+now.state+")");
 
 				rpc.setActivity({
 					details: "🎵  "+now.title,
 					state: "👤  "+now.artist,
-					startTimestamp: moment().unix(),
+					startTimestamp: start,
 					endTimestamp: end,
 					largeImageKey: keys.imageKeys.large,
-					smallImageKey: keys.imageKeys.small,
+					smallImageKey: paused,
 					largeImageText: "💿  "+now.album,
 					//smallImageText: "💿  "+now.album,
 					instance: false,

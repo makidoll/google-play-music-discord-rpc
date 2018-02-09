@@ -19,6 +19,10 @@
 window.maki = {};
 window.maki.interval = null;
 window.maki.socket = io("http://127.0.0.1:13370");
+window.maki.states = {
+	"Play": "paused",
+	"Pause": "playing"
+} 
 
 window.maki.socket.on("connect", function() {
 	window.maki.interval = window.setInterval(function() {
@@ -27,8 +31,9 @@ window.maki.socket.on("connect", function() {
 				title: document.getElementById("currently-playing-title").textContent,
 				artist: document.getElementById("player-artist").textContent,
 				album: document.querySelector(".player-album").textContent,
+				current: document.getElementById("time_container_current").textContent,
 				duration: document.getElementById("time_container_duration").textContent,
-				//current: document.getElementById("time_container_current").textContent
+				state: window.maki.states[document.getElementById("player-bar-play-pause").title]
 			});
 
 			// let xhr = new XMLHttpRequest();
