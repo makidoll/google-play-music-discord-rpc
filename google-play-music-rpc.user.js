@@ -15,6 +15,7 @@
 // 	}
 // 	return out;
 // }
+
 window.maki = {};
 window.maki.interval = null;
 window.maki.socket = io("http://127.0.0.1:13370");
@@ -38,21 +39,6 @@ window.maki.socket.on("connect", function() {
 	}, 1000);
 });
 
-<<<<<<< HEAD
 window.maki.socket.on("disconnect", function() {
 	window.clearInterval(window.maki.interval);
 });
-=======
-	if (window.current_song != update) {
-		// Song change
-		window.current_song = update;
-
-		let xhr = new XMLHttpRequest();
-
-		xhr.open("POST", "http://127.0.0.1:13370/google-play-music-rpc", true);
-		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		xhr.send(myStupidEncodingThing(update));
-	}
-
-}, 8000);
->>>>>>> 96ce738bccaca0a489bc7d4312b4466d6f9feb9c
